@@ -1,3 +1,5 @@
+ToDo List
+
 Todo list is the simple dark theme web application that would help you manage your day to day tasks.
 You can add, delete and mark as complete an item and additionally filter items based on their completition status.
 
