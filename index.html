@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+      integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o="
+      crossorigin="anonymous"
+    />
+    <link href="./style.css" rel="stylesheet" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <header>
+      <h1>My ToDo List</h1>
+    </header>
+    <form>
+      <input class="todo-input" type="text" />
+      <button class="todo-button" type="submit">
+        <i class="fas fa-plus-square"></i>
+      </button>
+      <div class="select">
+        <select name="todos" class="filter-todo">
+          <option value="all">All</option>
+          <option value="Completed">Completed</option>
+          <option value="Incomplete">Incomplete</option>
+        </select>
+      </div>
+      <button class="clear-all-todo" data-title="clear list">
+        <i class="fas fa-eraser"></i>
+      </button>
+    </form>
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

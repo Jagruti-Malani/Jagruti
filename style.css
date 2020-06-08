@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #525252, #272121);
+  color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: #f5f5f5;
+}
+
+form button {
+  color: #3282b8;
+  background: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  color: #f5f5f5;
+  background: #3282b8;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo {
+  margin: 0.5rem;
+  background: #f5f5f5;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  border: none;
+  padding: 1rem;
+  color: #f5f5f5;
+  background: #8b0000;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background-color: #228b22;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check,
+.fa-erase {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotate(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1rem;
+  background: #f5f5f5;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #3282b8;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  color: #3282b8;
+  background: #f5f5f5;
+}
+
+.clear-all-todo[data-title] {
+  position: relative;
+}
+
+/*
+.clear-all-todo:hover::after,
+.clear-all-todo:focus::after {
+  content: attr(data-title);
+  position: absolute;
+  left: 100%;
+  top: 25%;
+  min-width: 80px;
+  background-color: #f5f5f5;
+  padding: 12px;
+  color: #000000;
+  border-radius: 6px;
+  font-size: 1rem;
+} */
