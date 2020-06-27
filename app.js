@@ -57,13 +57,13 @@ function deleteCheck(event) {
 function filterTodo(e) {
   const todos = todoList.childNodes;
   todos.forEach(function (todo) {
-    let todoChild = todo.firstChild;
+    const todoChild = todo.firstChild;
     switch (e.target.value) {
       case "all":
         todoChild.style.display = "flex";
         break;
       case COMPLETED:
-        if (todoChild.classList.contains("completed")) {
+        if (todo.classList.contains("completed")) {
           todoChild.style.display = "flex";
         } else {
           todoChild.style.display = "none";
@@ -71,7 +71,7 @@ function filterTodo(e) {
         break;
       case INCOMPLETE:
         if (
-          !todoChild.classList.contains("completed") &&
+          !todo.classList.contains("completed") ||
           !todoChild.classList.contains("imp")
         ) {
           todoChild.style.display = "flex";
@@ -181,6 +181,5 @@ function findTodo(todos, todo) {
   for (let i = 0; i < todos.length; i++) {
     if (todos[i].value == todo) return i;
   }
-
   return -1;
 }
