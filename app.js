@@ -70,10 +70,7 @@ function filterTodo(e) {
         }
         break;
       case INCOMPLETE:
-        if (
-          !todo.classList.contains("completed") ||
-          !todoChild.classList.contains("imp")
-        ) {
+        if (!todo.classList.contains("completed")) {
           todoChild.style.display = "flex";
         } else {
           todoChild.style.display = "none";
